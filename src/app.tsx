@@ -1,20 +1,12 @@
 import React from "react";
-
-interface MeuBotaoProps {
-  texto: string
-}
-
-function MeuBotao(props: MeuBotaoProps) {
-  return <button className="button">{props.texto}</button>
-}
+import { Header } from "./components/header";
+import { AttendeeList } from "./components/attendee-list";
 
 export function App() {
   return (
-    <div>
-      <MeuBotao texto="Clique aqui" />
-      <MeuBotao texto="Clique aqui" />
-      <MeuBotao texto="Clique aqui" />
-      <MeuBotao texto="Clique aqui" />
+    <div className="max-w-[1216px] mx-auto py-5 flex flex-col gap-5">
+     <Header />
+     <AttendeeList />
     </div>
   )
 }
